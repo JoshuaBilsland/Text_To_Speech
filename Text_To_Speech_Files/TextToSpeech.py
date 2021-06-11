@@ -17,19 +17,34 @@ while continueLoop == True:
     print()
     engine.say(textToConvert)
     #Play the speech 
+    print("Playing speech..")
+    print()
     engine.runAndWait()
     #Save to mp3 
-    saveToMp3 = input ("Do you want to save this speech to an mp3 file? (Y/N) :")
-    if saveToMp3 == "Y":
-        print()
-        print("Saving to mp3 file...")
-        print()
-        engine.save_to_file(textToConvert,"TextToSpeech.mp3")
-        engine.runAndWait()
-        print()
-        print("Save successful")
-        print()
-    
+    validInput = False
+
+    while validInput == False:
+        saveToMp3 = input ("Do you want to save this speech to an mp3 file? (Y/N) :")
+        if saveToMp3 == "Y":
+            print()
+            print("Saving to mp3 file...")
+            print()
+            engine.save_to_file(textToConvert,"TextToSpeech.mp3")
+            engine.runAndWait()
+            print()
+            print("Save successful")
+            print()
+            validInput = True
+        elif saveToMp3 == "N":
+            print()
+            print("Ok, no problem")
+            print()
+            validInput = True
+        else:
+            print()
+            print("Please only type Y or N")
+            print()
+
     #Asks user if they want to use the program again
     validInput = False
     while validInput == False:
@@ -46,7 +61,7 @@ while continueLoop == True:
             print()
             print("Please only enter Y/N")
             print()
-
+6
 #End of program
 print("------------------")
 print(" Program Finished ")
