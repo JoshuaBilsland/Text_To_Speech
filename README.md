@@ -1,3 +1,7 @@
+# CONTEXT NOTICE
+This project was created while I was doing my GCSEs, serving as an archive of my initial steps into programming. As a result, it may not adhere to the same standards as my more recent work.
+
+---
 # Text_To_Speech
 A text to speech program
 <br>
